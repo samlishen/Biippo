@@ -7,17 +7,47 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.os.Handler;
 
+import java.util.ArrayList;
+
+import Source.Category;
+import Source.Searchable;
+import Source.SubCategory;
+
 
 public class WelcomeScreen extends ActionBarActivity {
     private static int TIME_OUT=5;
+
+    //Create a list of Searchable object
+    private ArrayList<Searchable> searchableList;
+    private ArrayList<Searchable> categoryList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
+//------------------------------------------------------------------------------------------------
+        //Creating all categories and sub categories and put them in lists so can be used later
+        //TODO
+        Category tire = new Category("Tire");
+        SubCategory tirePressure = new SubCategory("Check Tire Pressure");
+        SubCategory tireRotation = new SubCategory("Tire Rotation");
+        SubCategory tireChange = new SubCategory("Tire Change");
+        tire.addItem(tirePressure);
+        tire.addItem(tireChange);
+        tire.addItem(tireRotation);
+        categoryList.add(tire);
+        Category oil = new Category("Oil");
+        categoryList.add(oil);
+        Category emergency = new Category("Emergency");
+        categoryList.add(emergency);
+//------------------------------------------------------------------------------------------------
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(WelcomeScreen.this, MainActivity.class));
+                Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
+                intent.putExtra("categoryList", categoryList);
+                intent.putExtra("searchableList", categoryList);
+                startActivity(intent);
                 WelcomeScreen.this.finish();
             }
         },TIME_OUT*1000);
