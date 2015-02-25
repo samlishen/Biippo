@@ -1,33 +1,24 @@
 package biippo.css360.uwb.biippobeta;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.os.Handler;
 
 
-public class WelcomeScreen extends ActionBarActivity {
-    private static int TIME_OUT=5;
+public class MainActivity extends ActionBarActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome_screen);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(WelcomeScreen.this, MainActivity.class));
-                WelcomeScreen.this.finish();
-            }
-        },TIME_OUT*1000);
+        setContentView(R.layout.activity_main);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_welcome_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -45,5 +36,4 @@ public class WelcomeScreen extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }
