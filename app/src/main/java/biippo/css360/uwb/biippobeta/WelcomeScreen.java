@@ -18,8 +18,7 @@ public class WelcomeScreen extends ActionBarActivity {
     private static int TIME_OUT=5;
 
     //Create a list of Searchable object
-    private ArrayList<Searchable> searchableList;
-    private ArrayList<Searchable> categoryList;
+    private ArrayList<Searchable> categoryList = new ArrayList<Searchable>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +40,15 @@ public class WelcomeScreen extends ActionBarActivity {
         Category emergency = new Category("Emergency");
         categoryList.add(emergency);
 //------------------------------------------------------------------------------------------------
+        Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
+        intent.putExtra("categoryList", categoryList);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
-                intent.putExtra("categoryList", categoryList);
-                intent.putExtra("searchableList", categoryList);
-                startActivity(intent);
                 WelcomeScreen.this.finish();
             }
         },TIME_OUT*1000);
+        startActivity(intent);
     }
 
 
