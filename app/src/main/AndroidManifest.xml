@@ -20,6 +20,14 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name=".SelectCategory"
+            android:label="@string/title_activity_select_category" >
+        </activity>
+        <activity
+            android:name=".SelectSubCategory"
+            android:label="@string/title_activity_select_sub_category" >
+        </activity>
     </application>
 
 </manifest>

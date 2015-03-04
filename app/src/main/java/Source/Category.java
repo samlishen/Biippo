@@ -1,27 +1,38 @@
 package Source;
 
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
 /**
  * Created by Li on 15/2/25.
  */
-public class Category extends Searchable{
-    private ArrayList<SubCategory> list;
-    private int count;
+public class Category implements Parcelable, Searchable {
+    protected ArrayList<SubCategory> list;
+    protected String searchableName;
+    protected int count;
 
     public Category(String name){
-        super(name);
+        searchableName = name;
         list = new ArrayList<SubCategory>();
         count = 0;
     }
 
     public Category(Category toBeCopied){
-        super(toBeCopied);
+        searchableName = toBeCopied.getSearchableName();
         list = new ArrayList<SubCategory>();
         for(int i = 0; i < toBeCopied.getCount(); i++){
             addItem(toBeCopied.getItem(i));
             count++;
         }
+    }
+
+    public Category(Parcel p){
+        searchableName = p.readString();
+        p.readTypedList(list, SubCategory.CREATER);
+        count = p.readInt();
     }
 
     public int getCount(){
@@ -52,5 +63,42 @@ public class Category extends Searchable{
     public Category clone(){
         Category temp = new Category(this);
         return temp;
+    }
+
+    @Override
+    public int describeContents(){
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(searchableName);
+        dest.writeTypedList(list);
+        dest.writeInt(count);
+    }
+
+    public static Parcelable.Creator<Category> CREATER = new Creator<Category>(){
+
+        @Override
+        public Category createFromParcel(Parcel source) {
+            return new Category(source);
+        }
+
+        @Override
+        public Category[] newArray(int size) {
+            return new Category[0];
+        };
+    };
+
+    @Override
+    public String getSearchableName() {
+        return searchableName;
+    }
+
+    @Override
+    public void setSearchableName(String name) {
+        if (name != null) {
+            searchableName = name;
+        }
     }
 }

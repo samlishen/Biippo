@@ -1,6 +1,9 @@
 package biippo.css360.uwb.biippobeta;
 
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,7 +13,6 @@ import android.os.Handler;
 import java.util.ArrayList;
 
 import Source.Category;
-import Source.Searchable;
 import Source.SubCategory;
 
 
@@ -18,7 +20,7 @@ public class WelcomeScreen extends ActionBarActivity {
     private static int TIME_OUT=5;
 
     //Create a list of Searchable object
-    private ArrayList<Searchable> categoryList = new ArrayList<Searchable>();
+    private ArrayList<Category> categoryList = new ArrayList<Category>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,18 +39,18 @@ public class WelcomeScreen extends ActionBarActivity {
         categoryList.add(tire);
         Category oil = new Category("Oil");
         categoryList.add(oil);
-        Category emergency = new Category("Emergency");
-        categoryList.add(emergency);
+//        Category emergency = new Category("Emergency");
+//        categoryList.add(emergency);
 //------------------------------------------------------------------------------------------------
-        Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
-        intent.putExtra("categoryList", categoryList);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
+                intent.putExtra("categoryList", categoryList);
                 WelcomeScreen.this.finish();
+                startActivity(intent);
             }
         },TIME_OUT*1000);
-        startActivity(intent);
     }
 
 
