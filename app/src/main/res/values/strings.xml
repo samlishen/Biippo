@@ -6,4 +6,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_select_category">SelectCategory</string>
     <string name="title_activity_select_sub_category">SelectSubCategory</string>
+    <string name="title_activity_display_page">DisplayPage</string>
+    <string name="title_activity_select_type">SelectType</string>
+    <string name="title_activity_instruction">Instruction</string>
+    <string name="title_activity_video">video</string>
 </resources>

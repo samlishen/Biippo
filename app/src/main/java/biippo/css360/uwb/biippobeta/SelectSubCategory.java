@@ -2,8 +2,7 @@ package biippo.css360.uwb.biippobeta;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
@@ -41,6 +40,13 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.SelectSubCategory_button_category1:
+                Intent intent = new Intent(SelectSubCategory.this, SelectType.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("toBeDisplaied",passedCategory.getItem(0));
+                intent.putExtras(bundle);
+                startActivity(intent);
+        }
     }
 }

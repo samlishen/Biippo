@@ -13,7 +13,7 @@ public class SubCategory implements Searchable, Parcelable{
     private int steps;
     private String[] text;
     private int[] picture;
-    private Uri video;
+    private String video;
     public static Creator<SubCategory> CREATOR = new Creator<SubCategory>(){
 
         @Override
@@ -60,7 +60,7 @@ public class SubCategory implements Searchable, Parcelable{
         steps = p.readInt();
         text = p.createStringArray();
         picture = p.createIntArray();
-        video = p.readParcelable(Uri.class.getClassLoader());
+        video = p.readString();
     }
 
     public int getSteps() {
@@ -101,16 +101,16 @@ public class SubCategory implements Searchable, Parcelable{
         }
     }
 
-    public void setVideo(Uri video){
+    public void setVideo(String video){
         this.video = video;
     }
 
-    public Uri getVideo() {
+    public String getVideo() {
         return video;
     }
 
-    public Uri removeVideo(){
-        Uri temp = video;
+    public String removeVideo(){
+        String temp = video;
         video = null;
         return temp;
     }
@@ -143,6 +143,6 @@ public class SubCategory implements Searchable, Parcelable{
         dest.writeInt(steps);
         dest.writeStringArray(text);
         dest.writeIntArray(picture);
-        dest.writeParcelable(video, flags);
+        dest.writeString(video);
     }
 }
