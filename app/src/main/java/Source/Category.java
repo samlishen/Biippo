@@ -14,6 +14,12 @@ public class Category implements Parcelable, Searchable {
     protected String searchableName;
     protected int count;
 
+    public Category(){
+        list = new ArrayList<SubCategory>();
+        searchableName = "";
+        count = 0;
+    }
+
     public Category(String name){
         searchableName = name;
         list = new ArrayList<SubCategory>();
@@ -30,8 +36,9 @@ public class Category implements Parcelable, Searchable {
     }
 
     public Category(Parcel p){
+        this();
         searchableName = p.readString();
-        p.readTypedList(list, SubCategory.CREATER);
+        p.readTypedList(list, SubCategory.CREATOR);
         count = p.readInt();
     }
 
@@ -77,7 +84,7 @@ public class Category implements Parcelable, Searchable {
         dest.writeInt(count);
     }
 
-    public static Parcelable.Creator<Category> CREATER = new Creator<Category>(){
+    public static Parcelable.Creator<Category> CREATOR = new Creator<Category>(){
 
         @Override
         public Category createFromParcel(Parcel source) {

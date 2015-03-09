@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import Source.Category;
 import Source.Searchable;
+import Source.SubCategory;
 
 
 public class SelectCategory extends ActionBarActivity implements View.OnClickListener{
@@ -24,7 +25,21 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_category);
-        categoryList = getIntent().getParcelableArrayListExtra("categoryList");
+
+        categoryList = new ArrayList<Category>();
+        Category tire = new Category("Tire");
+        SubCategory tirePressure = new SubCategory("Check Tire Pressure", 1);
+        tirePressure.addText(0, "HAHA");
+        tirePressure.addPicture(0, 1010);
+//        SubCategory tireRotation = new SubCategory("Tire Rotation", 1);
+//        SubCategory tireChange = new SubCategory("Tire Change", 1);
+        tire.addItem(tirePressure);
+//        tire.addItem(tireChange);
+//        tire.addItem(tireRotation);
+        categoryList.add(tire);
+        Category oil = new Category("Oil");
+        categoryList.add(oil);
+
         cate1 = (Button)findViewById(R.id.SelectCategory_button_category1);
         cate2 = (Button)findViewById(R.id.SelectCategory_button_category2);
         cate3 = (Button)findViewById(R.id.SelectCategory_button_category3);
@@ -40,6 +55,8 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
             }
         }
 
+        cate1.setOnClickListener(this);
+
     }
 
     @Override
@@ -48,7 +65,11 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
             case R.id.SelectCategory_button_category1:
                 passedCategory =categoryList.get(0);
                 Intent intent = new Intent(SelectCategory.this, SelectSubCategory.class);
-                intent.putExtra("passedCategory", passedCategory);
+
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("passedCategory", passedCategory);
+                intent.putExtras(bundle);
+
                 startActivity(intent);
         }
     }

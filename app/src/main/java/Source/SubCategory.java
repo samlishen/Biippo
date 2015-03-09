@@ -1,19 +1,20 @@
 package Source;
 
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.view.View;
 
-import java.util.ArrayList;
 
 /**
  * Created by Li on 15/2/25.
  */
 public class SubCategory implements Searchable, Parcelable{
-    private ArrayList<Element> list;
-    private int count;
     private String searchableName;
-    public static Creator<SubCategory> CREATER = new Creator<SubCategory>(){
+    private int steps;
+    private String[] text;
+    private int[] picture;
+    private Uri video;
+    public static Creator<SubCategory> CREATOR = new Creator<SubCategory>(){
 
         @Override
         public SubCategory createFromParcel(Parcel source) {
@@ -26,49 +27,91 @@ public class SubCategory implements Searchable, Parcelable{
         }
     };
 
-    public SubCategory(String name){
+    public SubCategory(){
+
+    }
+
+    public SubCategory(String name, int steps){
         searchableName = name;
-        list = new ArrayList<Element>();
-        count = 0;
+        this.steps = steps;
+        text = new String[steps];
+        picture = new int[steps];
+        video = null;
     }
 
     public SubCategory(SubCategory toBeCopied){
+        this();
         searchableName = toBeCopied.getSearchableName();
-        list = new ArrayList<Element>();
-        for(int i = 0; i < toBeCopied.getCount(); i++){
-            list.add(toBeCopied.getItem(0));
-            count++;
+        steps = toBeCopied.steps;
+        text = new String[steps];
+        for (int i = 0; i < steps; i++){
+            text[i] = toBeCopied.text[i];
         }
+        picture = new int[steps];
+        for (int i = 0; i < steps; i++){
+            picture[i] = toBeCopied.picture[i];
+        }
+        video = toBeCopied.video;
     }
 
     public SubCategory(Parcel p){
+        this();
         searchableName = p.readString();
-        p.readTypedList(list, View.CREATER);
-        count = p.readInt();
+        steps = p.readInt();
+        text = p.createStringArray();
+        picture = p.createIntArray();
+        video = p.readParcelable(Uri.class.getClassLoader());
     }
 
-    public int getCount() {
-        return count;
+    public int getSteps() {
+        return steps;
     }
 
-    public void addItem(Element item){
-        list.add(item);
-        count++;
+
+    public void addText(int index, String item){
+        text[index] = item;
     }
 
-    public void addItem(int index, Element item){
-        list.add(index, item);
-        count++;
+    public String getText(int index){
+        return text[index];
     }
 
-    public Element getItem(int index){
-        return list.get(index);
+    public String removeText(int index){
+        String temp = text[index];
+        text[index] = null;
+        return temp;
     }
 
-    public Element removeItem(int index){
-        Element temp = getItem(index);
-        list.remove(index);
-        count--;
+    public void addPicture(int index, int item){
+        if (index < steps) picture[index] = item;
+    }
+
+    public int getPicture(int index){
+        if (index < steps) return picture[index];
+        else return 0;
+    }
+
+    public int removePicture(int index){
+        if (index < steps) {
+            int temp = picture[index];
+            picture[index] = 0;
+            return temp;
+        } else {
+            return 0;
+        }
+    }
+
+    public void setVideo(Uri video){
+        this.video = video;
+    }
+
+    public Uri getVideo() {
+        return video;
+    }
+
+    public Uri removeVideo(){
+        Uri temp = video;
+        video = null;
         return temp;
     }
 
@@ -97,7 +140,9 @@ public class SubCategory implements Searchable, Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(searchableName);
-        dest.writeTypedList(list);
-        dest.writeInt(count);
+        dest.writeInt(steps);
+        dest.writeStringArray(text);
+        dest.writeIntArray(picture);
+        dest.writeParcelable(video, flags);
     }
 }

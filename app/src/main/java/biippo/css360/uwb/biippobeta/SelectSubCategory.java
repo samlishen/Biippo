@@ -19,7 +19,10 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_sub_category);
-        passedCategory = getIntent().getParcelableExtra("passedCategory");
+
+        Bundle bundle = getIntent().getExtras();
+        passedCategory = bundle.getParcelable("passedCategory");
+
         cate1 = (Button)findViewById(R.id.SelectSubCategory_button_category1);
         cate2 = (Button)findViewById(R.id.SelectSubCategory_button_category2);
         cate3 = (Button)findViewById(R.id.SelectSubCategory_button_category3);
