@@ -26,7 +26,7 @@ public class WelcomeScreen extends ActionBarActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
+                Intent intent = new Intent(WelcomeScreen.this, SelectCategory.class);
                 WelcomeScreen.this.finish();
                 startActivity(intent);
             }
