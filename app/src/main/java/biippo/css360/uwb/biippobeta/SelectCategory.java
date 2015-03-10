@@ -56,6 +56,13 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         tireChange.addPicture(5, R.drawable.changetire6);
         tireChange.addText(6, "Step 7: Remove the tire. Place the flat tire under the vehicle so in the event of a jack failure the vehicle will fall on the old wheel, hopefully preventing injury. If the jack is placed on a flat, solid base, you shouldn't have any problems. The tire might be stuck due to rust. You could try hitting the inside half of the tire with a rubber mallet to loosen the tire, or use the spare tire to hit the outside half.");
         tireChange.addPicture(6, R.drawable.changetire7);
+        tireChange.addText(7, "Step 8: Place the spare tire on the hub. Take care to align the rim of the spare tire with the wheel bolts, then pu on the lug nuts");
+        tireChange.addPicture(7, R.drawable.changetire8);
+        tireChange.addText(8, "Step 9: Tighten the nuts by hand until they are all snug. They should turn easily at first. Avoid using so much force that you risk upsetting the jack. You will tighten the lug nuts again once the car is down and there is no risk of it falling.");
+        tireChange.addPicture(8, R.drawable.changetire9);
+        tireChange.addText(9, "Step 10: Lower the car without applying full weight on the tire. Tighten the nuts as much as possible.");
+        tireChange.addPicture(9, R.drawable.changetire10);
+        tireChange.addText(10, "Step 11: ");
         tire.addItem(tirePressure);
         tire.addItem(tireChange);
         tire.addItem(tireRotation);
