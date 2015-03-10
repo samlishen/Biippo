@@ -10,10 +10,10 @@ import java.util.ArrayList;
  * Created by Li on 15/2/25.
  */
 public class Category implements Parcelable, Searchable {
-    protected ArrayList<SubCategory> list;
-    protected String searchableName;
-    protected int icon;
-    protected int count;
+    private ArrayList<SubCategory> list;
+    private String searchableName;
+    private int icon;
+    private int count;
 
     public Category(){
         list = new ArrayList<SubCategory>();

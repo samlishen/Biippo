@@ -6,20 +6,10 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="biippo.css360.uwb.biippobeta.SelectSubCategory">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Title"
-        android:id="@+id/SelectSubCategory.textview.title"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/SelectSubCategory_button_category1"
-        android:layout_below="@+id/SelectSubCategory.textview.title"
         android:layout_centerHorizontal="true" />
 
     <ImageButton

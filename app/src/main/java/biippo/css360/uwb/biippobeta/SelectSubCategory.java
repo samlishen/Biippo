@@ -13,9 +13,9 @@ import Source.SubCategory;
 
 public class SelectSubCategory extends ActionBarActivity implements View.OnClickListener{
 
-    Category passedCategory;
-    SubCategory toBeDisplaied;
-    ImageButton cate1, cate2, cate3, cate4, cate5;
+    private Category passedCategory;
+    private SubCategory toBeDisplaied;
+    private ImageButton cate1, cate2, cate3, cate4, cate5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

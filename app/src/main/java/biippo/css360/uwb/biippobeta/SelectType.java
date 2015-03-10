@@ -15,8 +15,8 @@ import Source.SubCategory;
 
 public class SelectType extends ActionBarActivity implements View.OnClickListener{
 
-    ImageButton instruction, video;
-    SubCategory toBeDisplaied;
+    private ImageButton instruction, video;
+    private SubCategory toBeDisplaied;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

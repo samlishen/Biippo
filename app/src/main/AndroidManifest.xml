@@ -30,24 +30,12 @@
             android:label="@string/title_activity_select_sub_category" >
         </activity>
         <activity
-            android:name=".DisplayPage"
-            android:label="@string/title_activity_display_page" >
-        </activity>
-        <activity
             android:name=".SelectType"
             android:label="@string/title_activity_select_type" >
         </activity>
         <activity
             android:name=".Instruction"
             android:label="@string/title_activity_instruction" >
-        </activity>
-        <activity
-            android:name=".video"
-            android:label="@string/title_activity_video" >
-        </activity>
-        <activity
-            android:name=".Video"
-            android:label="@string/title_activity_video" >
         </activity>
     </application>
 
