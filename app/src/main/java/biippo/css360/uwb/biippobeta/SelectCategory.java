@@ -50,7 +50,12 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         tireChange.addPicture(2, R.drawable.changetire3);
         tireChange.addText(3, "Step 4: Remove the hub cap and loosen the nuts by turning counterclockwise. Don't take them all the way off; just break the resistance. By keeping the wheel on the ground when you first loosen the nuts, you'll make that you're turning the nuts instead of the wheel. Use the wrench that came with your car or a standard cross wrench. It can take quite a lot of force to break your lug nuts free.");
         tireChange.addPicture(3, R.drawable.changetire4);
-        tireChange.addText(4, "Step 5: Pump or crank the jack to lift the tire off the ground. You need to lift it high enough to remove the flat tire and replace it with a spare.      As you lift, make sure that the car is stable. If you notice any instability, lower the jack and fix the problem before fully lifting the car.    ");
+        tireChange.addText(4, "Step 5: Pump or crank the jack to lift the tire off the ground. You need to lift it high enough to remove the flat tire and replace it with a spare. As you lift, make sure that the car is stable. If you notice any instability, lower the jack and fix the problem before fully lifting the car.    ");
+        tireChange.addPicture(4, R.drawable.changetire5);
+        tireChange.addText(5, "Step 6: Remove the nuts the rest of the way. Turn them counterclockwise until they are loose. Repeat with all lug nuts, then remove the nuts completely.");
+        tireChange.addPicture(5, R.drawable.changetire6);
+        tireChange.addText(6, "Step 7: Remove the tire. Place the flat tire under the vehicle so in the event of a jack failure the vehicle will fall on the old wheel, hopefully preventing injury. If the jack is placed on a flat, solid base, you shouldn't have any problems. The tire might be stuck due to rust. You could try hitting the inside half of the tire with a rubber mallet to loosen the tire, or use the spare tire to hit the outside half.");
+        tireChange.addPicture(6, R.drawable.changetire7);
         tire.addItem(tirePressure);
         tire.addItem(tireChange);
         tire.addItem(tireRotation);
