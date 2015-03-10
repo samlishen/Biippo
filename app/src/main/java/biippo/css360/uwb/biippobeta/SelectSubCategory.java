@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 import Source.Category;
+import Source.SubCategory;
 
 
 public class SelectSubCategory extends ActionBarActivity implements View.OnClickListener{
 
     Category passedCategory;
+    SubCategory toBeDisplaied;
     Button cate1, cate2, cate3, cate4, cate5;
 
     @Override
@@ -40,13 +42,27 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent(SelectSubCategory.this, SelectType.class);
+        Bundle bundld = new Bundle();
         switch (v.getId()){
             case R.id.SelectSubCategory_button_category1:
-                Intent intent = new Intent(SelectSubCategory.this, SelectType.class);
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("toBeDisplaied",passedCategory.getItem(0));
-                intent.putExtras(bundle);
-                startActivity(intent);
+                toBeDisplaied = passedCategory.getItem(0);
+                break;
+            case R.id.SelectSubCategory_button_category2:
+                toBeDisplaied = passedCategory.getItem(1);
+                break;
+            case R.id.SelectSubCategory_button_category3:
+                toBeDisplaied = passedCategory.getItem(2);
+                break;
+            case R.id.SelectSubCategory_button_category4:
+                toBeDisplaied = passedCategory.getItem(3);
+                break;
+            case R.id.SelectSubCategory_button_category5:
+                toBeDisplaied = passedCategory.getItem(4);
+                break;
         }
+        bundld.putParcelable("toBeDisplaied", toBeDisplaied);
+        intent.putExtras(bundld);
+        startActivity(intent);
     }
 }

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Category implements Parcelable, Searchable {
     protected ArrayList<SubCategory> list;
     protected String searchableName;
+    protected int icon;
     protected int count;
 
     public Category(){
@@ -40,6 +41,7 @@ public class Category implements Parcelable, Searchable {
         searchableName = p.readString();
         p.readTypedList(list, SubCategory.CREATOR);
         count = p.readInt();
+        icon = p.readInt();
     }
 
     public int getCount(){
@@ -72,6 +74,14 @@ public class Category implements Parcelable, Searchable {
         return temp;
     }
 
+    public int getIcon(){
+        return icon;
+    }
+
+    public void setIcon(int icon){
+        this.icon = icon;
+    }
+
     @Override
     public int describeContents(){
         return 0;
@@ -82,6 +92,7 @@ public class Category implements Parcelable, Searchable {
         dest.writeString(searchableName);
         dest.writeTypedList(list);
         dest.writeInt(count);
+        dest.writeInt(icon);
     }
 
     public static Parcelable.Creator<Category> CREATOR = new Creator<Category>(){

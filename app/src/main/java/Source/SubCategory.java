@@ -14,6 +14,7 @@ public class SubCategory implements Searchable, Parcelable{
     private String[] text;
     private int[] picture;
     private String video;
+    private int icon;
     public static Creator<SubCategory> CREATOR = new Creator<SubCategory>(){
 
         @Override
@@ -120,6 +121,14 @@ public class SubCategory implements Searchable, Parcelable{
         return temp;
     }
 
+    public int getIcon(){
+        return icon;
+    }
+
+    public void setIcon(int icon){
+        this.icon = icon;
+    }
+
     @Override
     public String getSearchableName() {
         return searchableName;
@@ -144,5 +153,6 @@ public class SubCategory implements Searchable, Parcelable{
         dest.writeStringArray(text);
         dest.writeIntArray(picture);
         dest.writeString(video);
+        dest.writeInt(icon);
     }
 }

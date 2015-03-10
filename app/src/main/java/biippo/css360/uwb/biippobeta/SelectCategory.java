@@ -89,16 +89,27 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent(SelectCategory.this, SelectSubCategory.class);
+        Bundle bundle = new Bundle();
         switch (v.getId()){
             case R.id.SelectCategory_button_category1:
-                passedCategory =categoryList.get(0);
-                Intent intent = new Intent(SelectCategory.this, SelectSubCategory.class);
-
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("passedCategory", passedCategory);
-                intent.putExtras(bundle);
-
-                startActivity(intent);
+                passedCategory = categoryList.get(0);
+                break;
+            case R.id.SelectCategory_button_category2:
+                passedCategory = categoryList.get(1);
+                break;
+            case R.id.SelectCategory_button_category3:
+                passedCategory = categoryList.get(2);
+                break;
+            case R.id.SelectCategory_button_category4:
+                passedCategory = categoryList.get(3);
+                break;
+            case R.id.SelectCategory_button_category5:
+                passedCategory = categoryList.get(4);
+                break;
         }
+        bundle.putParcelable("passedCategory", passedCategory);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
