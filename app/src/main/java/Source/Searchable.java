@@ -12,4 +12,8 @@ public interface Searchable{
 
     public void setSearchableName(String name);
 
+    public int getIcon();
+
+    public void setIcon(int icon);
+
 }

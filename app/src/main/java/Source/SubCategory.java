@@ -59,9 +59,12 @@ public class SubCategory implements Searchable, Parcelable{
         this();
         searchableName = p.readString();
         steps = p.readInt();
+        text = new String[steps];
+        picture = new int[steps];
         text = p.createStringArray();
         picture = p.createIntArray();
         video = p.readString();
+        icon = p.readInt();
     }
 
     public int getSteps() {

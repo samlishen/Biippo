@@ -15,58 +15,39 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sub Category1"
-        android:id="@+id/SelectSubCategory.button.category1"
+        android:id="@+id/SelectSubCategory_button_category1"
         android:layout_below="@+id/SelectSubCategory.textview.title"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sub Category2"
-        android:id="@+id/SelectSubCategory.button.category2"
-        android:layout_below="@+id/SelectSubCategory.button.category1"
-        android:layout_alignRight="@+id/SelectSubCategory.button.category1"
-        android:layout_alignEnd="@+id/SelectSubCategory.button.category1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/SelectSubCategory_button_category2"
+        android:layout_below="@+id/SelectSubCategory_button_category1"
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sub Category3"
-        android:id="@+id/SelectSubCategory.button.category3"
-        android:layout_below="@+id/SelectSubCategory.button.category2"
-        android:layout_alignRight="@+id/SelectSubCategory.button.category2"
-        android:layout_alignEnd="@+id/SelectSubCategory.button.category2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/SelectSubCategory_button_category3"
+        android:layout_below="@+id/SelectSubCategory_button_category2"
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sub Category4"
-        android:id="@+id/SelectSubCategory.button.category4"
-        android:layout_below="@+id/SelectSubCategory.button.category3"
-        android:layout_alignRight="@+id/SelectSubCategory.button.category3"
-        android:layout_alignEnd="@+id/SelectSubCategory.button.category3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/SelectSubCategory_button_category4"
+        android:layout_below="@+id/SelectSubCategory_button_category3"
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sub Category5"
-        android:id="@+id/SelectSubCategory.button.category5"
-        android:layout_below="@+id/SelectSubCategory.button.category4"
-        android:layout_alignRight="@+id/SelectSubCategory.button.category4"
-        android:layout_alignEnd="@+id/SelectSubCategory.button.category4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/SelectSubCategory_button_category5"
+        android:layout_below="@+id/SelectSubCategory_button_category4"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

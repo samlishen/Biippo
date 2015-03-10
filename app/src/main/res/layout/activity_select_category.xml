@@ -16,59 +16,39 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category1"
         android:id="@+id/SelectCategory_button_category1"
         android:layout_below="@+id/SelectCategory_textview_title"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category2"
         android:id="@+id/SelectCategory_button_category2"
         android:layout_below="@+id/SelectCategory_button_category1"
-        android:layout_alignRight="@+id/SelectCategory_button_category1"
-        android:layout_alignEnd="@+id/SelectCategory_button_category1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category3"
         android:id="@+id/SelectCategory_button_category3"
         android:layout_below="@+id/SelectCategory_button_category2"
-        android:layout_alignRight="@+id/SelectCategory_button_category2"
-        android:layout_alignEnd="@+id/SelectCategory_button_category2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category4"
         android:id="@+id/SelectCategory_button_category4"
         android:layout_below="@+id/SelectCategory_button_category3"
-        android:layout_alignRight="@+id/SelectCategory_button_category3"
-        android:layout_alignEnd="@+id/SelectCategory_button_category3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category5"
         android:id="@+id/SelectCategory_button_category5"
         android:layout_below="@+id/SelectCategory_button_category4"
-        android:layout_alignRight="@+id/SelectCategory_button_category4"
-        android:layout_alignEnd="@+id/SelectCategory_button_category4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

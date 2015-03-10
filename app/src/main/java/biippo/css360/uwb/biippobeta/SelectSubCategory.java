@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import Source.Category;
 import Source.SubCategory;
@@ -14,7 +15,7 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
 
     Category passedCategory;
     SubCategory toBeDisplaied;
-    Button cate1, cate2, cate3, cate4, cate5;
+    ImageButton cate1, cate2, cate3, cate4, cate5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +25,18 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
         Bundle bundle = getIntent().getExtras();
         passedCategory = bundle.getParcelable("passedCategory");
 
-        cate1 = (Button)findViewById(R.id.SelectSubCategory_button_category1);
-        cate2 = (Button)findViewById(R.id.SelectSubCategory_button_category2);
-        cate3 = (Button)findViewById(R.id.SelectSubCategory_button_category3);
-        cate4 = (Button)findViewById(R.id.SelectSubCategory_button_category4);
-        cate5 = (Button)findViewById(R.id.SelectSubCategory_button_category5);
-        Button array[] = {cate1, cate2, cate3, cate4, cate5};
+        cate1 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category1);
+        cate2 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category2);
+        cate3 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category3);
+        cate4 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category4);
+        cate5 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category5);
+        ImageButton array[] = {cate1, cate2, cate3, cate4, cate5};
         for(int i = 0; i < 5; i++){
             if(i < passedCategory.getCount()){
-                array[i].setText(passedCategory.getItem(i).getSearchableName());
+                array[i].setImageResource(passedCategory.getItem(i).getIcon());
                 array[i].setOnClickListener(this);
             } else {
-                array[i].setVisibility(View.INVISIBLE);
+                array[i].setVisibility(View.GONE);
             }
         }
     }
@@ -43,7 +44,7 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(SelectSubCategory.this, SelectType.class);
-        Bundle bundld = new Bundle();
+        Bundle bundle = new Bundle();
         switch (v.getId()){
             case R.id.SelectSubCategory_button_category1:
                 toBeDisplaied = passedCategory.getItem(0);
@@ -61,8 +62,8 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
                 toBeDisplaied = passedCategory.getItem(4);
                 break;
         }
-        bundld.putParcelable("toBeDisplaied", toBeDisplaied);
-        intent.putExtras(bundld);
+        bundle.putParcelable("toBeDisplaied", toBeDisplaied);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }
