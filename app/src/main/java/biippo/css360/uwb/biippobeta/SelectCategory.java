@@ -133,6 +133,45 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
 
         SubCategory fluid=new SubCategory("Fluid Change", 6);
 
+        fluid.addPicture(0,R.drawable.leak1);
+        fluid.addText(0,"Step 1: Antifreeze Leak Antifreeze is one of the most common leaks on cars. It's not a serious leak to have,\n" +
+                "but you should get it fixed as soon as possible. Coolant (or antifreeze) usually has a greenish color.\n" +
+                "Sometimes it's bright orange or pink. But, usually it's green. It has a bit of a sticky, viscous feel to it.\n");
+
+        fluid.addPicture(1,R.drawable.leak2);
+        fluid.addText(1,"2.Gasoline Leak \n If you have a puddle of gas near the rear of the car, it probably means you have a leaky\n" +
+                "gas tank. If the puddle is near the front, something is probably wrong with the fuel pump. Also, check the\n" +
+                "fuel lines for the source of the leak.\n");
+
+        fluid.addPicture(2,R.drawable.leak3);
+        fluid.addText(2,"Step 3: Oil Leak  Another common fluid to drip from your car is good ol' engine oil. If your car leaks oil in\n" +
+                "drips while your car is parked and leaves a puddle on your garage's floor, take it into a mechanic and\n" +
+                "get it fixed ASAP. An oil leak can adversely affect oil levels in your car, and if left left unchecked,\n" +
+                "can cause engine damage. New oil has a yellowish brown color, while older oil looks dark brown or black.\n");
+
+        fluid.addPicture(3,R.drawable.leak4);
+        fluid.addText(3,"Step 4: Brake Fluid \n Brake fluid is clear to yellowish in color and has a medium thickness and a slightly oily\n" +
+                "feel. If you see a puddle of liquid with these properties under your car, have your car towed to a mechanic\n" +
+                "immediately. Get your car towed even if you just suspect you're leaking brake fluid.\n");
+
+        fluid.addPicture(4,R.drawable.leak5);
+        fluid.addText(4,"Step 5: Automatic Transmission Fluid \n Automatic transmission fluid has sort of a light red color when it is new\n" +
+                "and a dark red or brownish color when it is old. It's thick and has an almost oil-like feel. Transmission\n" +
+                "fluid serves as a lubricant in your car's transmission so that your car shifts gears smoothly and correctly.\n" +
+                "The fluid also serves as a coolant in the transmission. If your car gets low on transmission fluid, you run\n" +
+                "the risk of grinding or burning your transmission to destruction.\n");
+
+        fluid.addPicture(5,R.drawable.leak6);
+        fluid.addText(5,"Step 6: Windshield Wiper Solvent \n Windshield wiper fluid is usually blue, but sometimes green or orange. It's\n" +
+                "really thin and feels almost like water. Check the windshield wiper fluid reservoir and the tubes that\n" +
+                "carry fluid for any leaks. This isn't a serious leak.");
+
+
+        emergency.addItem(fluid);
+        categoryList.add(emergency);
+
+
+
 
         cate1 = (ImageButton)findViewById(R.id.SelectCategory_button_category1);
         cate2 = (ImageButton)findViewById(R.id.SelectCategory_button_category2);
