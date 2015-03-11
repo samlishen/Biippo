@@ -132,7 +132,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
 
 
         SubCategory fluid=new SubCategory("Fluid Change", 6);
-
+        fluid.setIcon(R.drawable.button_fluid);
         fluid.addPicture(0,R.drawable.leak1);
         fluid.addText(0,"Step 1: Antifreeze Leak Antifreeze is one of the most common leaks on cars. It's not a serious leak to have,\n" +
                 "but you should get it fixed as soon as possible. Coolant (or antifreeze) usually has a greenish color.\n" +
