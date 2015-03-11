@@ -1,6 +1,5 @@
 package Source;
 
-import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -8,6 +7,7 @@ import android.os.Parcelable;
 /**
  * Created by Li on 15/2/25.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class SubCategory implements Searchable, Parcelable{
     private String searchableName;
     private int steps;
@@ -15,7 +15,7 @@ public class SubCategory implements Searchable, Parcelable{
     private int[] picture;
     private String video;
     private int icon;
-    public static Creator<SubCategory> CREATOR = new Creator<SubCategory>(){
+    public static final Creator<SubCategory> CREATOR = new Creator<SubCategory>(){
 
         @Override
         public SubCategory createFromParcel(Parcel source) {
@@ -45,13 +45,9 @@ public class SubCategory implements Searchable, Parcelable{
         searchableName = toBeCopied.getSearchableName();
         steps = toBeCopied.steps;
         text = new String[steps];
-        for (int i = 0; i < steps; i++){
-            text[i] = toBeCopied.text[i];
-        }
+        System.arraycopy(toBeCopied.text, 0, text, 0, steps);
         picture = new int[steps];
-        for (int i = 0; i < steps; i++){
-            picture[i] = toBeCopied.picture[i];
-        }
+        System.arraycopy(toBeCopied.picture, 0, picture, 0, steps);
         video = toBeCopied.video;
     }
 
@@ -120,8 +116,7 @@ public class SubCategory implements Searchable, Parcelable{
     }
 
     public SubCategory clone(){
-        SubCategory temp = new SubCategory(this);
-        return temp;
+        return new SubCategory(this);
     }
 
     public int getIcon(){

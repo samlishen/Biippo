@@ -6,16 +6,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.content.Intent;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import java.util.ArrayList;
-
 import Source.Category;
-import Source.Searchable;
 import Source.SubCategory;
 
 
@@ -37,7 +32,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
         actionbar_title.setText("Biippo Car App");
 
-        categoryList = new ArrayList<Category>();
+        categoryList = new ArrayList<>();
         //Tire
         Category tire = new Category("Tire");
         tire.setIcon(R.drawable.button_tire);
@@ -47,7 +42,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         tirePressure.addText(0, "Step 1: Find the operating tire pressure on the sticker that located on the side of your driver's door");
         tirePressure.addPicture(0, 0);
         tirePressure.addText(1, "Step 2: Use a tire gauge that can be purchased at local department store and auto part store to check tires' pressure. Place your tire gauge onto the tire's valve stem and read the output. You should always check the pressure when the tire is cold, which means the car has not been driven within 3 hours or a mile.");
-        tirePressure.addPicture(1, R.drawable.tirepressure2);
+        tirePressure.addPicture(1, R.drawable.tirepressure1);
         tirePressure.setVideo("https://www.youtube.com/watch?v=QTst6ZdlVtg");
         //Tire Rotation
         SubCategory tireRotation = new SubCategory("Tire Rotation", 2);
@@ -81,7 +76,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         tireChange.addPicture(9, R.drawable.changetire10);
         tireChange.addText(10, "Step 11: Lower the car to the ground fully and remove the jack. Finish tightening the nuts and replace the hubcap.");
         tireChange.addPicture(10, R.drawable.changetire11);
-        tireChange.addText(11, "Step 12: Put the old tire in your trunk and take it to a mechanic. Get an estimate for the cost of repair. Small punctures can usually be repaired for less than $15. If the tire is not repairable, tehy can dipose of it properly and sell you a replacement.");
+        tireChange.addText(11, "Step 12: Put the old tire in your trunk and take it to a mechanic. Get an estimate for the cost of repair. Small punctures can usually be repaired for less than $15. If the tire is not repairable, then can dispose of it properly and sell you a replacement.");
         tireChange.addPicture(11, R.drawable.changetire12);
         tireChange.setVideo("https://www.youtube.com/watch?v=joBmbh0AGSQ");
         tire.addItem(tirePressure);

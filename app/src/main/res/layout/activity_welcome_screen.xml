@@ -8,7 +8,7 @@
     <TextView android:text="Bippo " android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#ff333aff"
-        android:textSize="45dp"
+        android:textSize="45sp"
         android:id="@+id/bippo"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -25,10 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Make car maintainance easy"
+        android:text="Make car maintenance easy"
         android:id="@+id/introduction"
         android:textColor="#ff9e21ff"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

@@ -9,27 +9,28 @@ import java.util.ArrayList;
 /**
  * Created by Li on 15/2/25.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class Category implements Parcelable, Searchable {
-    private ArrayList<SubCategory> list;
-    private String searchableName;
-    private int icon;
-    private int count;
+    protected final ArrayList<SubCategory> list;
+    protected String searchableName;
+    protected int icon;
+    protected int count;
 
     public Category(){
-        list = new ArrayList<SubCategory>();
+        list = new ArrayList<>();
         searchableName = "";
         count = 0;
     }
 
     public Category(String name){
         searchableName = name;
-        list = new ArrayList<SubCategory>();
+        list = new ArrayList<>();
         count = 0;
     }
 
     public Category(Category toBeCopied){
         searchableName = toBeCopied.getSearchableName();
-        list = new ArrayList<SubCategory>();
+        list = new ArrayList<>();
         for(int i = 0; i < toBeCopied.getCount(); i++){
             addItem(toBeCopied.getItem(i));
             count++;
@@ -70,8 +71,7 @@ public class Category implements Parcelable, Searchable {
     }
 
     public Category clone(){
-        Category temp = new Category(this);
-        return temp;
+        return new Category(this);
     }
 
     public int getIcon(){
@@ -105,7 +105,7 @@ public class Category implements Parcelable, Searchable {
         @Override
         public Category[] newArray(int size) {
             return new Category[0];
-        };
+        }
     };
 
     @Override

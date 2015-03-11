@@ -2,24 +2,17 @@ package biippo.css360.uwb.biippobeta;
 
 import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.os.Handler;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 import Source.Category;
 import Source.SubCategory;
 
 
 public class WelcomeScreen extends ActionBarActivity {
-    private static int TIME_OUT=5;
+    private static final int TIME_OUT=5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
