@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -22,8 +23,11 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_sub_category);
 
+
         Bundle bundle = getIntent().getExtras();
         passedCategory = bundle.getParcelable("passedCategory");
+        Window w = getWindow();
+        w.setTitle(passedCategory.getSearchableName());
 
         cate1 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category1);
         cate2 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category2);

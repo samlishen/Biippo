@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -23,6 +24,8 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_type);
         toBeDisplaied = getIntent().getExtras().getParcelable("toBeDisplaied");
+        Window w = getWindow();
+        w.setTitle(toBeDisplaied.getSearchableName());
         instruction = (ImageButton)findViewById(R.id.SelectType_button_instruction);
         video = (ImageButton)findViewById(R.id.SelectType_button_video);
         if(toBeDisplaied.getVideo() == "" || toBeDisplaied.getVideo() == null) video.setVisibility(View.GONE);
