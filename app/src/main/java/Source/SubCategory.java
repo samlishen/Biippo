@@ -63,8 +63,6 @@ public class SubCategory implements Searchable, Parcelable{
         picture = new int[steps];
         text = p.createStringArray();
         picture = p.createIntArray();
-        p.readStringArray(text);
-        p.readIntArray(picture);
         video = p.readString();
         icon = p.readInt();
     }
