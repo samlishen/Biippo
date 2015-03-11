@@ -80,8 +80,9 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         categoryList.add(tire);
 
         //Oil
-        Category oil = new Category("Oil");
-        oil.setIcon(R.drawable.button_oil);
+        Category engine = new Category("Engine");
+        engine.setIcon(R.drawable.button_oil);
+        engine.setIcon(R.drawable.button_engine);
 
         SubCategory oilChange=new SubCategory("Oil Change",8);
         oilChange.setVideo("https://www.youtube.com/watch?v=7xzQ-RIr0Cw");
@@ -89,7 +90,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         oilChange.addText(0,"Step 1: Drive your 8th generation Civic onto ramps, or use a car-jack to lift your vehicle a few feet off of the ground ");
 
         oilChange.addPicture(0,R.drawable.oil2);
-        oilChange.addText(1,"Step 2: Open your hood and remove the oil cap\n");
+        oilChange.addText(1,"Step 2: Open your hood and remove the engine cap\n");
 
         oilChange.addPicture(0,R.drawable.oil3);
         oilChange.addText(2,"Step 3: Locate the drain plug underneath your vehicle. It looks like a bolt and should be labeled");
@@ -98,31 +99,43 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         oilChange.addText(3,"Step 4: Place a drain-pan underneath the plug, and remove the bolt with a 17mm wrench.\n");
 
         oilChange.addPicture(0,R.drawable.oil5);
-        oilChange.addText(4,"Step 5: Wait for the oil to finish draining into the pan.");
+        oilChange.addText(4,"Step 5: Wait for the engine to finish draining into the pan.");
 
         oilChange.addPicture(0,0);
         oilChange.addText(5,"Using the 17mm wrench, tighten the drain-bolt back on");
 
         oilChange.addPicture(0,R.drawable.oil6);
-        oilChange.addText(6,"Step 6: With 4 quarts of 5W-20 synthetic oil, pour the oil into the hole where you first removed the oil cap\n");
+        oilChange.addText(6,"Step 6: With 4 quarts of 5W-20 synthetic engine, pour the engine into the hole where you first removed the engine cap\n");
 
         oilChange.addPicture(0,R.drawable.oil7);
-        oilChange.addText(7,"Step 7: Screw the oil cap back on. Your car now has new oil!\n");
+        oilChange.addText(7,"Step 7: Screw the engine cap back on. Your car now has new engine!\n");
 
-        oil.addItem(oilChange);
-        categoryList.add(oil);
+        engine.addItem(oilChange);
+        categoryList.add(engine);
 
         //Emergency
         Category emergency = new Category("Emergency");
         emergency.setIcon(R.drawable.button_emer);
         SubCategory jumpStart = new SubCategory("Jump Start", 8);
+        jumpStart.setIcon(R.drawable.button_jump);
         jumpStart.addText(0, "Step 1: Move both cars next to each other and turn off both cars.");
         jumpStart.addPicture(0, R.drawable.jump1);
         jumpStart.addText(1, "Step 2: Have your booster cables ready.");
         jumpStart.addPicture(1, R.drawable.jump2);
         jumpStart.addText(2, "Step 3: Connect red positive cable to dead car’s red positive terminal.");
         jumpStart.addPicture(2, R.drawable.jump3);
-
+        jumpStart.addText(3, "Step 4: Connect red positive cable to live car’s red positive terminal and connect black negative cable to live car’s black negative terminal.");
+        jumpStart.addPicture(3, R.drawable.jump4);
+        jumpStart.addText(4, "Step 5: Connect black negative cable to dead car ground (like the engine block).");
+        jumpStart.addPicture(4, R.drawable.jump5);
+        jumpStart.addText(5, "Step 6: Start up the live car and let it run for a few minutes then start up the dead car.");
+        jumpStart.addPicture(5, R.drawable.jump6);
+        jumpStart.addText(6, "Step 7: Disconnect the cables in reverse order: dead car negative, live car negative, live car positive, dead car positive.");
+        jumpStart.addPicture(6, 0);
+        jumpStart.addText(7, "Step 8: Drive the dead car around for about half an hour to allow the battery to recharge.");
+        jumpStart.addPicture(7, 0);
+        jumpStart.setVideo("https://www.youtube.com/watch?v=MEtJnwnjcU4");
+        emergency.addItem(jumpStart);
 
 
 
