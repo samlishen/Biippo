@@ -39,17 +39,17 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         //Tire Pressure
         SubCategory tirePressure = new SubCategory("Check Tire Pressure", 2);
         tirePressure.setIcon(R.drawable.button_tire_pressure);
-        tirePressure.addText(0, "Step 1: Find the operating tire pressure on the sticker that located on the side of your driver's door");
+        tirePressure.addText(0, "Step 1: \nFind the operating tire pressure on the sticker that located on the side of your driver's door");
         tirePressure.addPicture(0, 0);
-        tirePressure.addText(1, "Step 2: Use a tire gauge that can be purchased at local department store and auto part store to check tires' pressure. Place your tire gauge onto the tire's valve stem and read the output. You should always check the pressure when the tire is cold, which means the car has not been driven within 3 hours or a mile.");
+        tirePressure.addText(1, "Step 2: \nUse a tire gauge that can be purchased at local department store and auto part store to check tires' pressure. Place your tire gauge onto the tire's valve stem and read the output. You should always check the pressure when the tire is cold, which means the car has not been driven within 3 hours or a mile.");
         tirePressure.addPicture(1, R.drawable.tirepressure1);
         tirePressure.setVideo("https://www.youtube.com/watch?v=QTst6ZdlVtg");
         //Tire Rotation
         SubCategory tireRotation = new SubCategory("Tire Rotation", 2);
         tireRotation.setIcon(R.drawable.button_tire_rotation);
+        tireRotation.addPicture(0, R.drawable.tirerotation2);
         tireRotation.addText(0, "Four Wheel Rotation: 4-Wheel Drive Vehicles equipped with permanent 4-Wheel Drive and those with \"on Command\" 4-Wheel Drive and driven mainly in 4-Wheel mode, are best suited to a four tire cross rotation. With this pattern, tires from both axles are crossed and installed on the opposing axle. ");
         tireRotation.addText(1, "Straight Rotation: Straight Rotation was developed in the early years of radial tires. This rotation method simply replaces the front to rear and rear to front and is used for directional tread patterns.");
-        tireRotation.addPicture(1, R.drawable.tirerotation2);
         tireRotation.setVideo("https://www.youtube.com/watch?v=Elr8aki-TlQ");
         //Change Tire
         SubCategory tireChange = new SubCategory("Tire Change", 12);
@@ -92,27 +92,27 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         oilChange.setIcon(R.drawable.button_oil);
 
         oilChange.addPicture(0,R.drawable.oil1);
-        oilChange.addText(0,"Step 1: Drive your 8th generation Civic onto ramps, or use a car-jack to lift your vehicle a few feet off of the ground ");
+        oilChange.addText(0,"Step 1: Drive your 8th generation Civic onto ramps, or use a car-jack to lift your vehicle a few feet off of the ground.");
 
-        oilChange.addPicture(0,R.drawable.oil2);
-        oilChange.addText(1,"Step 2: Open your hood and remove the engine cap\n");
+        oilChange.addPicture(1,R.drawable.oil2);
+        oilChange.addText(1,"Step 2: Open your hood and remove the engine cap.");
 
-        oilChange.addPicture(0,R.drawable.oil3);
-        oilChange.addText(2,"Step 3: Locate the drain plug underneath your vehicle. It looks like a bolt and should be labeled");
+        oilChange.addPicture(2,R.drawable.oil3);
+        oilChange.addText(2,"Step 3: Locate the drain plug underneath your vehicle. It looks like a bolt and should be labeled.");
 
-        oilChange.addPicture(0,R.drawable.oil4);
-        oilChange.addText(3,"Step 4: Place a drain-pan underneath the plug, and remove the bolt with a 17mm wrench.\n");
+        oilChange.addPicture(3,R.drawable.oil4);
+        oilChange.addText(3,"Step 4: Place a drain-pan underneath the plug, and remove the bolt with a 17mm wrench.");
 
-        oilChange.addPicture(0,R.drawable.oil5);
+        oilChange.addPicture(4,R.drawable.oil5);
         oilChange.addText(4,"Step 5: Wait for the engine to finish draining into the pan.");
 
-        oilChange.addPicture(0,0);
-        oilChange.addText(5,"Using the 17mm wrench, tighten the drain-bolt back on");
+        oilChange.addPicture(5,R.drawable.oil6);
+        oilChange.addText(5,"Using the 17mm wrench, tighten the drain-bolt back on.");
 
-        oilChange.addPicture(0,R.drawable.oil6);
+        oilChange.addPicture(6,R.drawable.oil6);
         oilChange.addText(6,"Step 6: With 4 quarts of 5W-20 synthetic engine, pour the engine into the hole where you first removed the engine cap\n");
 
-        oilChange.addPicture(0,R.drawable.oil7);
+
         oilChange.addText(7,"Step 7: Screw the engine cap back on. Your car now has new engine!\n");
         oilChange.setVideo("https://www.youtube.com/watch?v=7xzQ-RIr0Cw");
         engine.addItem(oilChange);
@@ -123,21 +123,21 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         emergency.setIcon(R.drawable.button_emer);
         SubCategory jumpStart = new SubCategory("Jump Start", 8);
         jumpStart.setIcon(R.drawable.button_jump);
-        jumpStart.addText(0, "Step 1: Move both cars next to each other and turn off both cars.");
+        jumpStart.addText(0, "Step 1: \nMove both cars next to each other and turn off both cars.");
         jumpStart.addPicture(0, R.drawable.jump1);
-        jumpStart.addText(1, "Step 2: Have your booster cables ready.");
+        jumpStart.addText(1, "Step 2: \nHave your booster cables ready.");
         jumpStart.addPicture(1, R.drawable.jump2);
-        jumpStart.addText(2, "Step 3: Connect red positive cable to dead car’s red positive terminal.");
+        jumpStart.addText(2, "Step 3: \nConnect red positive cable to dead car’s red positive terminal.");
         jumpStart.addPicture(2, R.drawable.jump3);
-        jumpStart.addText(3, "Step 4: Connect red positive cable to live car’s red positive terminal and connect black negative cable to live car’s black negative terminal.");
+        jumpStart.addText(3, "Step 4: \nConnect red positive cable to live car’s red positive terminal and connect black negative cable to live car’s black negative terminal.");
         jumpStart.addPicture(3, R.drawable.jump4);
-        jumpStart.addText(4, "Step 5: Connect black negative cable to dead car ground (like the engine block).");
+        jumpStart.addText(4, "Step 5: \nConnect black negative cable to dead car ground (like the engine block).");
         jumpStart.addPicture(4, R.drawable.jump5);
-        jumpStart.addText(5, "Step 6: Start up the live car and let it run for a few minutes then start up the dead car.");
+        jumpStart.addText(5, "Step 6: \nStart up the live car and let it run for a few minutes then start up the dead car.");
         jumpStart.addPicture(5, R.drawable.jump6);
-        jumpStart.addText(6, "Step 7: Disconnect the cables in reverse order: dead car negative, live car negative, live car positive, dead car positive.");
+        jumpStart.addText(6, "Step 7: \nDisconnect the cables in reverse order: dead car negative, live car negative, live car positive, dead car positive.\n");
         jumpStart.addPicture(6, 0);
-        jumpStart.addText(7, "Step 8: Drive the dead car around for about half an hour to allow the battery to recharge.");
+        jumpStart.addText(7, "Step 8: \nDrive the dead car around for about half an hour to allow the battery to recharge.");
         jumpStart.addPicture(7, 0);
         jumpStart.setVideo("https://www.youtube.com/watch?v=MEtJnwnjcU4");
         emergency.addItem(jumpStart);
@@ -145,36 +145,36 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         SubCategory fluid=new SubCategory("Fluid Change", 6);
         fluid.setIcon(R.drawable.button_fluid);
         fluid.addPicture(0,R.drawable.leak1);
-        fluid.addText(0,"Step 1: Antifreeze Leak Antifreeze is one of the most common leaks on cars. It's not a serious leak to have,\n" +
-                "but you should get it fixed as soon as possible. Coolant (or antifreeze) usually has a greenish color.\n" +
-                "Sometimes it's bright orange or pink. But, usually it's green. It has a bit of a sticky, viscous feel to it.\n");
+        fluid.addText(0,"Step 1: Antifreeze Leak \nAntifreeze is one of the most common leaks on cars. It's not a serious leak to have, " +
+                "but you should get it fixed as soon as possible. Coolant (or antifreeze) usually has a greenish color. " +
+                "Sometimes it's bright orange or pink. But, usually it's green. It has a bit of a sticky, viscous feel to it.");
 
         fluid.addPicture(1,R.drawable.leak2);
-        fluid.addText(1,"2.Gasoline Leak \n If you have a puddle of gas near the rear of the car, it probably means you have a leaky\n" +
-                "gas tank. If the puddle is near the front, something is probably wrong with the fuel pump. Also, check the\n" +
-                "fuel lines for the source of the leak.\n");
+        fluid.addText(1,"Step 2: Gasoline Leak \nIf you have a puddle of gas near the rear of the car, it probably means you have a leaky " +
+                "gas tank. If the puddle is near the front, something is probably wrong with the fuel pump. Also, check the " +
+                "fuel lines for the source of the leak.");
 
         fluid.addPicture(2,R.drawable.leak3);
-        fluid.addText(2,"Step 3: Oil Leak  Another common fluid to drip from your car is good ol' engine oil. If your car leaks oil in\n" +
-                "drips while your car is parked and leaves a puddle on your garage's floor, take it into a mechanic and\n" +
-                "get it fixed ASAP. An oil leak can adversely affect oil levels in your car, and if left left unchecked,\n" +
-                "can cause engine damage. New oil has a yellowish brown color, while older oil looks dark brown or black.\n");
+        fluid.addText(2,"Step 3: Oil Leak \nAnother common fluid to drip from your car is good ol' engine oil. If your car leaks oil in " +
+                "drips while your car is parked and leaves a puddle on your garage's floor, take it into a mechanic and " +
+                "get it fixed ASAP. An oil leak can adversely affect oil levels in your car, and if left left unchecked, " +
+                "can cause engine damage. New oil has a yellowish brown color, while older oil looks dark brown or black.");
 
         fluid.addPicture(3,R.drawable.leak4);
-        fluid.addText(3,"Step 4: Brake Fluid \n Brake fluid is clear to yellowish in color and has a medium thickness and a slightly oily\n" +
-                "feel. If you see a puddle of liquid with these properties under your car, have your car towed to a mechanic\n" +
-                "immediately. Get your car towed even if you just suspect you're leaking brake fluid.\n");
+        fluid.addText(3,"Step 4: Brake Fluid \nBrake fluid is clear to yellowish in color and has a medium thickness and a slightly oily " +
+                "feel. If you see a puddle of liquid with these properties under your car, have your car towed to a mechanic " +
+                "immediately. Get your car towed even if you just suspect you're leaking brake fluid.");
 
         fluid.addPicture(4,R.drawable.leak5);
-        fluid.addText(4,"Step 5: Automatic Transmission Fluid \n Automatic transmission fluid has sort of a light red color when it is new\n" +
-                "and a dark red or brownish color when it is old. It's thick and has an almost oil-like feel. Transmission\n" +
-                "fluid serves as a lubricant in your car's transmission so that your car shifts gears smoothly and correctly.\n" +
-                "The fluid also serves as a coolant in the transmission. If your car gets low on transmission fluid, you run\n" +
-                "the risk of grinding or burning your transmission to destruction.\n");
+        fluid.addText(4,"Step 5: Automatic Transmission Fluid \nAutomatic transmission fluid has sort of a light red color when it is new " +
+                "and a dark red or brownish color when it is old. It's thick and has an almost oil-like feel. Transmission " +
+                "fluid serves as a lubricant in your car's transmission so that your car shifts gears smoothly and correctly. " +
+                "The fluid also serves as a coolant in the transmission. If your car gets low on transmission fluid, you run " +
+                "the risk of grinding or burning your transmission to destruction.");
 
         fluid.addPicture(5,R.drawable.leak6);
-        fluid.addText(5,"Step 6: Windshield Wiper Solvent \n Windshield wiper fluid is usually blue, but sometimes green or orange. It's\n" +
-                "really thin and feels almost like water. Check the windshield wiper fluid reservoir and the tubes that\n" +
+        fluid.addText(5,"Step 6: Windshield Wiper Solvent \nWindshield wiper fluid is usually blue, but sometimes green or orange. It's " +
+                "really thin and feels almost like water. Check the windshield wiper fluid reservoir and the tubes that " +
                 "carry fluid for any leaks. This isn't a serious leak.");
         fluid.setVideo("https://www.youtube.com/watch?v=mZPFjDgT74I");
         emergency.addItem(fluid);

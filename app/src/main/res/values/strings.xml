@@ -12,4 +12,5 @@
     <string name="title_activity_video">video</string>
     <string name="title_activity_search">Search</string>
     <string name="title_activity_about">About</string>
+    <string name="jump_start1"><b>Step 1:</b>\nMove both cars next to each other and turn off both cars.</string>
 </resources>
