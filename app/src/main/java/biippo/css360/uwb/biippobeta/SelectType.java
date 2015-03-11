@@ -1,6 +1,5 @@
 package biippo.css360.uwb.biippobeta;
 
-import android.app.ActionBar;
 import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
@@ -10,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import Source.SubCategory;
 
@@ -25,13 +23,6 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_type);
         toBeDisplaied = getIntent().getExtras().getParcelable("toBeDisplaied");
-
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        actionBar.setCustomView(R.layout.actionbar_layout);
-        TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
-        actionbar_title.setText(toBeDisplaied.getSearchableName());
-
         instruction = (ImageButton)findViewById(R.id.SelectType_button_instruction);
         video = (ImageButton)findViewById(R.id.SelectType_button_video);
         if(toBeDisplaied.getVideo() == "" || toBeDisplaied.getVideo() == null) video.setVisibility(View.GONE);
