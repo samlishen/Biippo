@@ -114,7 +114,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
 
         oilChange.addPicture(0,R.drawable.oil7);
         oilChange.addText(7,"Step 7: Screw the engine cap back on. Your car now has new engine!\n");
-
+        oilChange.setVideo("https://www.youtube.com/watch?v=7xzQ-RIr0Cw");
         engine.addItem(oilChange);
         categoryList.add(engine);
 
@@ -141,13 +141,6 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         jumpStart.addPicture(7, 0);
         jumpStart.setVideo("https://www.youtube.com/watch?v=MEtJnwnjcU4");
         emergency.addItem(jumpStart);
-
-
-
-
-
-
-
 
         SubCategory fluid=new SubCategory("Fluid Change", 6);
         fluid.setIcon(R.drawable.button_fluid);
@@ -183,13 +176,9 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         fluid.addText(5,"Step 6: Windshield Wiper Solvent \n Windshield wiper fluid is usually blue, but sometimes green or orange. It's\n" +
                 "really thin and feels almost like water. Check the windshield wiper fluid reservoir and the tubes that\n" +
                 "carry fluid for any leaks. This isn't a serious leak.");
-
-
+        fluid.setVideo("https://www.youtube.com/watch?v=mZPFjDgT74I");
         emergency.addItem(fluid);
         categoryList.add(emergency);
-
-
-
 
         cate1 = (ImageButton)findViewById(R.id.SelectCategory_button_category1);
         cate2 = (ImageButton)findViewById(R.id.SelectCategory_button_category2);
@@ -229,7 +218,6 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
             startActivity(new Intent("biippo.about"));
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 

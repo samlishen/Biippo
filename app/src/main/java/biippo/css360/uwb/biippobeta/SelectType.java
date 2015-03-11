@@ -1,29 +1,41 @@
 package biippo.css360.uwb.biippobeta;
 
+import android.app.ActionBar;
+import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import Source.SubCategory;
 
 
 public class SelectType extends ActionBarActivity implements View.OnClickListener{
 
-    ImageButton instruction, video;
-    SubCategory toBeDisplayed;
+    private ImageButton instruction, video;
+    private SubCategory toBeDisplaied;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_type);
-        toBeDisplayed = getIntent().getExtras().getParcelable("toBeDisplayed");
+        toBeDisplaied = getIntent().getExtras().getParcelable("toBeDisplaied");
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar_layout);
+        TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
+        actionbar_title.setText(toBeDisplaied.getSearchableName());
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         instruction = (ImageButton)findViewById(R.id.SelectType_button_instruction);
         video = (ImageButton)findViewById(R.id.SelectType_button_video);
-        if(toBeDisplayed.getVideo().equals("") || toBeDisplayed.getVideo() == null) video.setVisibility(View.GONE);
+        if(toBeDisplaied.getVideo() == "" || toBeDisplaied.getVideo() == null) video.setVisibility(View.GONE);
         instruction.setOnClickListener(this);
         video.setOnClickListener(this);
     }
@@ -35,12 +47,12 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
             case R.id.SelectType_button_instruction:
                 Intent intent = new Intent(SelectType.this, Instruction.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("toBeDisplayed", toBeDisplayed);
+                bundle.putParcelable("toBeDisplaied", toBeDisplaied);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 break;
             case R.id.SelectType_button_video:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(toBeDisplayed.getVideo())));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(toBeDisplaied.getVideo())));
                 Log.i("Video", "Video Playing....");
                 break;
         }

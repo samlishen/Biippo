@@ -18,6 +18,7 @@ public class About extends ActionBarActivity {
         actionBar.setCustomView(R.layout.actionbar_layout);
         TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
         actionbar_title.setText("About");
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
 }

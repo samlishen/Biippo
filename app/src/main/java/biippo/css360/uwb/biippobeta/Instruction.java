@@ -1,24 +1,40 @@
 package biippo.css360.uwb.biippobeta;
 
+import android.app.ActionBar;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 import Source.SubCategory;
 
 
 public class Instruction extends ActionBarActivity {
 
-    SubCategory toBeDisplayed;
-    TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12;
-    ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12;
+    private SubCategory toBeDisplaied;
+    private TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12;
+    private ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruction);
-        toBeDisplayed = getIntent().getExtras().getParcelable("toBeDisplayed");
+        toBeDisplaied = getIntent().getExtras().getParcelable("toBeDisplaied");
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar_layout);
+        TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
+        actionbar_title.setText(toBeDisplaied.getSearchableName());
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         text1 = (TextView)findViewById(R.id.Instruction_textView_text1);
         text2 = (TextView)findViewById(R.id.Instruction_textView_text2);
         text3 = (TextView)findViewById(R.id.Instruction_textView_text3);
@@ -45,11 +61,12 @@ public class Instruction extends ActionBarActivity {
         image12 = (ImageView)findViewById(R.id.Instruction_imageView_picture12);
         TextView[] text = {text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12};
         ImageView[] image = {image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12};
+        setTitle(toBeDisplaied.getSearchableName());
         for (int i = 0; i < 12; i++){
-            if (i < toBeDisplayed.getSteps()){
-                if (toBeDisplayed.getText(i) != null && !toBeDisplayed.getText(i).equals("")) text[i].setText(toBeDisplayed.getText(i));
+            if (i < toBeDisplaied.getSteps()){
+                if (toBeDisplaied.getText(i) != null && toBeDisplaied.getText(i) != "") text[i].setText(toBeDisplaied.getText(i));
                 else text[i].setVisibility(View.GONE);
-                if (toBeDisplayed.getPicture(i) != 0) image[i].setImageResource(toBeDisplayed.getPicture(i));
+                if (toBeDisplaied.getPicture(i) != 0) image[i].setImageResource(toBeDisplaied.getPicture(i));
                 else image[i].setVisibility(View.GONE);
             } else {
                 text[i].setVisibility(View.GONE);

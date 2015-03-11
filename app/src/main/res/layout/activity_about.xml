@@ -33,4 +33,13 @@
         android:layout_marginTop="30dp"
         android:layout_below="@id/about_explain"/>
 
+    <TextView android:text="End User Documentation: \nTo use the Biippo app, first figure out what problem(s) your 8th generation civic is having. Proceed to choose
+your categories based on your problem. Next, choose the subcategory specifying your problem in more detail, and choose the pictures and written instructions or
+the video instructions based on your preferred method of learning."
+        android:id="@+id/about_enduser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/about_disclaimer"/>
+
 </RelativeLayout>
