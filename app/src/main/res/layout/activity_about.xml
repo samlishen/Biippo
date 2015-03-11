@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="biippo.css360.uwb.biippobeta.About">
+
+    <TextView android:text="Authors: \nBrody Schulke, Selen Taskin, Shen Li, Kuo Shih, Nikki Kiga, and Phat Tran"
+        android:id="@+id/about_authors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"/>
+
+    <TextView android:text="Version 2.0 BETA release"
+        android:id="@+id/about_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/about_authors"/>
+
+    <TextView android:text="This application was created as a project for our class: CSS 360 at the University of Washington, Bothell."
+        android:id="@+id/about_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/about_version"/>
+
+    <TextView android:text="Disclaimer: \nWe do not own any of the videos or pictures that are provided in this application. All materials belong to their respective owners. (Please don't sue us)"
+        android:id="@+id/about_disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/about_explain"/>
+
+</RelativeLayout>

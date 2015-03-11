@@ -1,11 +1,13 @@
 package biippo.css360.uwb.biippobeta;
 
+import android.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import Source.Category;
 import Source.SubCategory;
@@ -24,6 +26,12 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
 
         Bundle bundle = getIntent().getExtras();
         passedCategory = bundle.getParcelable("passedCategory");
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar_layout);
+        TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
+        actionbar_title.setText(passedCategory.getSearchableName());
 
         cate1 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category1);
         cate2 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category2);

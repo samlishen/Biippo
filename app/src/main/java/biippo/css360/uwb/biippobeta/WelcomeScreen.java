@@ -1,5 +1,6 @@
 package biippo.css360.uwb.biippobeta;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.os.Handler;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -23,6 +25,13 @@ public class WelcomeScreen extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar_layout);
+        TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
+        actionbar_title.setText("Welcome to Biippo");
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

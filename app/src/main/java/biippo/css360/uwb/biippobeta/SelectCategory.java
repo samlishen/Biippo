@@ -1,5 +1,6 @@
 package biippo.css360.uwb.biippobeta;
 
+import android.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -26,6 +28,12 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_category);
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar_layout);
+        TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
+        actionbar_title.setText("Biippo Car App");
 
         categoryList = new ArrayList<Category>();
         //Tire
@@ -200,6 +208,32 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
                 array[i].setVisibility(View.GONE);
             }
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_select_category, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        if (id == R.id.about) {
+            startActivity(new Intent("biippo.about"));
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

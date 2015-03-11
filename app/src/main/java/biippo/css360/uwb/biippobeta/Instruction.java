@@ -1,5 +1,6 @@
 package biippo.css360.uwb.biippobeta;
 
+import android.app.ActionBar;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -25,6 +26,13 @@ public class Instruction extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruction);
         toBeDisplaied = getIntent().getExtras().getParcelable("toBeDisplaied");
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar_layout);
+        TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
+        actionbar_title.setText(toBeDisplaied.getSearchableName());
+
         text1 = (TextView)findViewById(R.id.Instruction_textView_text1);
         text2 = (TextView)findViewById(R.id.Instruction_textView_text2);
         text3 = (TextView)findViewById(R.id.Instruction_textView_text3);
