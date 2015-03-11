@@ -114,6 +114,14 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
 
         //Emergency
         Category emergency = new Category("Emergency");
+        emergency.setIcon(R.drawable.button_emer);
+        SubCategory jumpStart = new SubCategory("Jump Start", 8);
+        jumpStart.addText(0, "Step 1: Move both cars next to each other and turn off both cars.");
+        jumpStart.addPicture(0, R.drawable.jump1);
+        jumpStart.addText(1, "Step 2: Have your booster cables ready.");
+        jumpStart.addPicture(1, R.drawable.jump2);
+        jumpStart.addText(2, "Step 3: Connect red positive cable to dead car’s red positive terminal.");
+        jumpStart.addPicture(2, R.drawable.jump3);
 
 
 
