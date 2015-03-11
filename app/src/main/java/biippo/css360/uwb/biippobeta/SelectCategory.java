@@ -82,10 +82,40 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         //Oil
         Category oil = new Category("Oil");
         oil.setIcon(R.drawable.button_oil);
+
+        SubCategory oilChange=new SubCategory("Oil Change",8);
+
+        oilChange.addPicture(0,R.drawable.oil1);
+        oilChange.addText(0,"Step 1: Drive your 8th generation Civic onto ramps, or use a car-jack to lift your vehicle a few feet off of the ground ");
+
+        oilChange.addPicture(0,R.drawable.oil2);
+        oilChange.addText(0,"Step 2: Open your hood and remove the oil cap\n");
+
+        oilChange.addPicture(0,R.drawable.oil3);
+        oilChange.addText(0,"Step 3: Locate the drain plug underneath your vehicle. It looks like a bolt and should be labeled");
+
+        oilChange.addPicture(0,R.drawable.oil4);
+        oilChange.addText(0,"Step 4: Place a drain-pan underneath the plug, and remove the bolt with a 17mm wrench.\n");
+
+        oilChange.addPicture(0,R.drawable.oil5);
+        oilChange.addText(0,"Step 5: Wait for the oil to finish draining into the pan.");
+
+        oilChange.addPicture(0,0);
+        oilChange.addText(0,"Using the 17mm wrench, tighten the drain-bolt back on");
+
+        oilChange.addPicture(0,R.drawable.oil6);
+        oilChange.addText(0,"Step 6: With 4 quarts of 5W-20 synthetic oil, pour the oil into the hole where you first removed the oil cap\n");
+
+        oilChange.addPicture(0,R.drawable.oil7);
+        oilChange.addText(0,"Step 7: Screw the oil cap back on. Your car now has new oil!\n");
+
+        oil.addItem(oilChange);
         categoryList.add(oil);
 
         //Emergency
         Category emergency = new Category("Emergency");
+
+
 
         cate1 = (ImageButton)findViewById(R.id.SelectCategory_button_category1);
         cate2 = (ImageButton)findViewById(R.id.SelectCategory_button_category2);
