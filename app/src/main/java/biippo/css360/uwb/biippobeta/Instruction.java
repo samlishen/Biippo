@@ -52,8 +52,7 @@ public class Instruction extends ActionBarActivity {
         image12 = (ImageView)findViewById(R.id.Instruction_imageView_picture12);
         TextView[] text = {text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12};
         ImageView[] image = {image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12};
-        Window w = getWindow();
-        w.setTitle(toBeDisplaied.getSearchableName());
+        setTitle(toBeDisplaied.getSearchableName());
         for (int i = 0; i < 12; i++){
             if (i < toBeDisplaied.getSteps()){
                 if (toBeDisplaied.getText(i) != null && toBeDisplaied.getText(i) != "") text[i].setText(toBeDisplaied.getText(i));

@@ -24,8 +24,7 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_type);
         toBeDisplaied = getIntent().getExtras().getParcelable("toBeDisplaied");
-        Window w = getWindow();
-        w.setTitle(toBeDisplaied.getSearchableName());
+        setTitle(toBeDisplaied.getSearchableName());
         instruction = (ImageButton)findViewById(R.id.SelectType_button_instruction);
         video = (ImageButton)findViewById(R.id.SelectType_button_video);
         if(toBeDisplaied.getVideo() == "" || toBeDisplaied.getVideo() == null) video.setVisibility(View.GONE);

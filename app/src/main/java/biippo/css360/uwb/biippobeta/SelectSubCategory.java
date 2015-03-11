@@ -26,8 +26,7 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
 
         Bundle bundle = getIntent().getExtras();
         passedCategory = bundle.getParcelable("passedCategory");
-        Window w = getWindow();
-        w.setTitle(passedCategory.getSearchableName());
+        setTitle(passedCategory.getSearchableName());
 
         cate1 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category1);
         cate2 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category2);

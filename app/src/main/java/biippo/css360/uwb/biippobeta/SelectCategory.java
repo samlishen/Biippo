@@ -27,8 +27,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_category);
-        Window w = getWindow();
-        w.setTitle("Select Category");
+        setTitle("Select Category");
 
         categoryList = new ArrayList<Category>();
         //Tire
