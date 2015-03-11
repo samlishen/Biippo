@@ -20,6 +20,7 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
     private Category passedCategory;
     private SubCategory toBeDisplaied;
     private ImageButton cate1, cate2, cate3, cate4, cate5;
+    private ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,13 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
         TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
         actionbar_title.setText(passedCategory.getSearchableName());
         actionBar.setDisplayHomeAsUpEnabled(true);
+        home = (ImageButton)findViewById(R.id.bippo);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SelectSubCategory.this, SelectCategory.class));
+            }
+        });
 
         cate1 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category1);
         cate2 = (ImageButton)findViewById(R.id.SelectSubCategory_button_category2);

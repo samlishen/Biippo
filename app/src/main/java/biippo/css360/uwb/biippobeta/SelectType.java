@@ -20,6 +20,7 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
 
     private ImageButton instruction, video;
     private SubCategory toBeDisplaied;
+    private ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,13 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
         TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
         actionbar_title.setText(toBeDisplaied.getSearchableName());
         actionBar.setDisplayHomeAsUpEnabled(true);
+        home = (ImageButton)findViewById(R.id.bippo);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SelectType.this, SelectCategory.class));
+            }
+        });
 
         instruction = (ImageButton)findViewById(R.id.SelectType_button_instruction);
         video = (ImageButton)findViewById(R.id.SelectType_button_video);

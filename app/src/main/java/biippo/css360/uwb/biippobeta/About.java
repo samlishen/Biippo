@@ -1,6 +1,7 @@
 package biippo.css360.uwb.biippobeta;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.media.Image;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
@@ -28,6 +29,13 @@ public class About extends ActionBarActivity {
         TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
         actionbar_title.setText("About");
         actionBar.setDisplayHomeAsUpEnabled(true);
+        home = (ImageButton)findViewById(R.id.bippo);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(About.this, SelectCategory.class));
+            }
+        });
     }
 
     @Override

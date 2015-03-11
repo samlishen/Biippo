@@ -1,6 +1,7 @@
 package biippo.css360.uwb.biippobeta;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +23,7 @@ public class Instruction extends ActionBarActivity {
     private SubCategory toBeDisplaied;
     private TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12;
     private ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12;
+    private ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,13 @@ public class Instruction extends ActionBarActivity {
         TextView actionbar_title = (TextView)findViewById(R.id.action_bar_title);
         actionbar_title.setText(toBeDisplaied.getSearchableName());
         actionBar.setDisplayHomeAsUpEnabled(true);
+        home = (ImageButton)findViewById(R.id.bippo);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Instruction.this, SelectCategory.class));
+            }
+        });
 
         text1 = (TextView)findViewById(R.id.Instruction_textView_text1);
         text2 = (TextView)findViewById(R.id.Instruction_textView_text2);
