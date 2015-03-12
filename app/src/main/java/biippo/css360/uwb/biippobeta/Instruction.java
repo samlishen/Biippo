@@ -23,7 +23,7 @@ public class Instruction extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruction);
-        toBeDisplayed = getIntent().getExtras().getParcelable("toBeDisplaied");
+        toBeDisplayed = getIntent().getExtras().getParcelable("toBeDisplayed");
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);

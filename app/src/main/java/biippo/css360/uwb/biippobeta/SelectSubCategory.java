@@ -81,7 +81,7 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
                 toBeDisplayed = passedCategory.getItem(4);
                 break;
         }
-        bundle.putParcelable("toBeDisplaied", toBeDisplayed);
+        bundle.putParcelable("toBeDisplayed", toBeDisplayed);
         intent.putExtras(bundle);
         startActivity(intent);
     }

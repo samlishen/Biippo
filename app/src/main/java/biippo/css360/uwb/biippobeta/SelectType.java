@@ -23,7 +23,7 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_type);
-        toBeDisplayed = getIntent().getExtras().getParcelable("toBeDisplaied");
+        toBeDisplayed = getIntent().getExtras().getParcelable("toBeDisplayed");
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
@@ -53,7 +53,7 @@ public class SelectType extends ActionBarActivity implements View.OnClickListene
             case R.id.SelectType_button_instruction:
                 Intent intent = new Intent(SelectType.this, Instruction.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("toBeDisplaied", toBeDisplayed);
+                bundle.putParcelable("toBeDisplayed", toBeDisplayed);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 break;
