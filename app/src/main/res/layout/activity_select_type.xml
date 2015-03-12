@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/SelectType_button_video"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/button_video" />
+        android:src="@drawable/button_video"
+        android:layout_marginTop="30dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -19,6 +20,7 @@
         android:id="@+id/SelectType_button_instruction"
         android:layout_below="@+id/SelectType_button_video"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/button_instructions" />
+        android:src="@drawable/button_instructions"
+        android:layout_marginTop="10dp" />
 
 </RelativeLayout>
