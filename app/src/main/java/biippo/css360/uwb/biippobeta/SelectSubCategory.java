@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -18,7 +16,7 @@ import Source.SubCategory;
 public class SelectSubCategory extends ActionBarActivity implements View.OnClickListener{
 
     private Category passedCategory;
-    private SubCategory toBeDisplaied;
+    private SubCategory toBeDisplayed;
     private ImageButton cate1, cate2, cate3, cate4, cate5;
     private ImageButton home;
 
@@ -68,22 +66,22 @@ public class SelectSubCategory extends ActionBarActivity implements View.OnClick
         Bundle bundle = new Bundle();
         switch (v.getId()){
             case R.id.SelectSubCategory_button_category1:
-                toBeDisplaied = passedCategory.getItem(0);
+                toBeDisplayed = passedCategory.getItem(0);
                 break;
             case R.id.SelectSubCategory_button_category2:
-                toBeDisplaied = passedCategory.getItem(1);
+                toBeDisplayed = passedCategory.getItem(1);
                 break;
             case R.id.SelectSubCategory_button_category3:
-                toBeDisplaied = passedCategory.getItem(2);
+                toBeDisplayed = passedCategory.getItem(2);
                 break;
             case R.id.SelectSubCategory_button_category4:
-                toBeDisplaied = passedCategory.getItem(3);
+                toBeDisplayed = passedCategory.getItem(3);
                 break;
             case R.id.SelectSubCategory_button_category5:
-                toBeDisplaied = passedCategory.getItem(4);
+                toBeDisplayed = passedCategory.getItem(4);
                 break;
         }
-        bundle.putParcelable("toBeDisplaied", toBeDisplaied);
+        bundle.putParcelable("toBeDisplaied", toBeDisplayed);
         intent.putExtras(bundle);
         startActivity(intent);
     }
