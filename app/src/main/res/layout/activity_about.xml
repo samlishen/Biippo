@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"/>
 
-    <TextView android:text="Version 2.0 BETA release"
+    <TextView android:text="Version 3.0"
         android:id="@+id/about_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

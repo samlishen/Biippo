@@ -41,7 +41,7 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         tirePressure.setIcon(R.drawable.button_tire_pressure);
         tirePressure.addText(0, "Step 1: \nFind the operating tire pressure on the sticker that located on the side of your driver's door");
         tirePressure.addPicture(0, 0);
-        tirePressure.addText(1, "Step 2: \nUse a tire gauge that can be purchased at local department store and auto part store to check tires' pressure. Place your tire gauge onto the tire's valve stem and read the output. You should always check the pressure when the tire is cold, which means the car has not been driven within 3 hours or a mile.");
+        tirePressure.addText(1, "\nStep 2: \nUse a tire gauge that can be purchased at local department store and auto part store to check tires' pressure. Place your tire gauge onto the tire's valve stem and read the output. You should always check the pressure when the tire is cold, which means the car has not been driven within 3 hours or a mile.");
         tirePressure.addPicture(1, R.drawable.tirepressure1);
         tirePressure.setVideo("https://www.youtube.com/watch?v=QTst6ZdlVtg");
         //Tire Rotation
@@ -54,29 +54,29 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         //Change Tire
         SubCategory tireChange = new SubCategory("Tire Change", 12);
         tireChange.setIcon(R.drawable.button_tire_change);
-        tireChange.addText(0, "Step 1: Place a heavy object (e.g., rock, concrete, spare wheel, etc.) in front of the front and back tires. ");
+        tireChange.addText(0, "Step 1: \nPlace a heavy object (e.g., rock, concrete, spare wheel, etc.) in front of the front and back tires. ");
         tireChange.addPicture(0, R.drawable.changetire1);
-        tireChange.addText(1, "Step 2: Take out the spare tire and the jack. Place the jack under the frame near the tire that you are going to change. Ensure that the jack is in contact with the metal portion of your car's frame.Many cars have molded plastic along the bottom. If you don't place the jack in the right spot, it will crack the plastic when you start lifting. If you're not sure about the right place to put the jack, read your owner's manual.     For most modern uni-body cars, there is a small notch or mark just behind the front wheel wells, or in front of the rear wheel wells where the jack is intended to be placed.     For most trucks or older cars that have a frame, look to place the jack on one of the beams of the frame just behind the front tire or in front of the rear tire.");
+        tireChange.addText(1, "Step 2: \nTake out the spare tire and the jack. Place the jack under the frame near the tire that you are going to change. Ensure that the jack is in contact with the metal portion of your car's frame.Many cars have molded plastic along the bottom. If you don't place the jack in the right spot, it will crack the plastic when you start lifting. If you're not sure about the right place to put the jack, read your owner's manual.     For most modern uni-body cars, there is a small notch or mark just behind the front wheel wells, or in front of the rear wheel wells where the jack is intended to be placed.     For most trucks or older cars that have a frame, look to place the jack on one of the beams of the frame just behind the front tire or in front of the rear tire.");
         tireChange.addPicture(1, R.drawable.changetire2);
-        tireChange.addText(2, "Step 3: Raise the jack until it is supporting (but not lifting) the car. The jack should be firmly in place against the underside of the vehicle. Check to make sure that the jack is perpendicular to the ground.");
+        tireChange.addText(2, "Step 3: \nRaise the jack until it is supporting (but not lifting) the car. The jack should be firmly in place against the underside of the vehicle. Check to make sure that the jack is perpendicular to the ground.");
         tireChange.addPicture(2, R.drawable.changetire3);
-        tireChange.addText(3, "Step 4: Remove the hub cap and loosen the nuts by turning counterclockwise. Don't take them all the way off; just break the resistance. By keeping the wheel on the ground when you first loosen the nuts, you'll make that you're turning the nuts instead of the wheel. Use the wrench that came with your car or a standard cross wrench. It can take quite a lot of force to break your lug nuts free.");
+        tireChange.addText(3, "Step 4: \nRemove the hub cap and loosen the nuts by turning counterclockwise. Don't take them all the way off; just break the resistance. By keeping the wheel on the ground when you first loosen the nuts, you'll make that you're turning the nuts instead of the wheel. Use the wrench that came with your car or a standard cross wrench. It can take quite a lot of force to break your lug nuts free.");
         tireChange.addPicture(3, R.drawable.changetire4);
-        tireChange.addText(4, "Step 5: Pump or crank the jack to lift the tire off the ground. You need to lift it high enough to remove the flat tire and replace it with a spare. As you lift, make sure that the car is stable. If you notice any instability, lower the jack and fix the problem before fully lifting the car.");
+        tireChange.addText(4, "Step 5: \nPump or crank the jack to lift the tire off the ground. You need to lift it high enough to remove the flat tire and replace it with a spare. As you lift, make sure that the car is stable. If you notice any instability, lower the jack and fix the problem before fully lifting the car.");
         tireChange.addPicture(4, R.drawable.changetire5);
-        tireChange.addText(5, "Step 6: Remove the nuts the rest of the way. Turn them counterclockwise until they are loose. Repeat with all lug nuts, then remove the nuts completely.");
+        tireChange.addText(5, "Step 6: \nRemove the nuts the rest of the way. Turn them counterclockwise until they are loose. Repeat with all lug nuts, then remove the nuts completely.");
         tireChange.addPicture(5, R.drawable.changetire6);
-        tireChange.addText(6, "Step 7: Remove the tire. Place the flat tire under the vehicle so in the event of a jack failure the vehicle will fall on the old wheel, hopefully preventing injury. If the jack is placed on a flat, solid base, you shouldn't have any problems. The tire might be stuck due to rust. You could try hitting the inside half of the tire with a rubber mallet to loosen the tire, or use the spare tire to hit the outside half.");
+        tireChange.addText(6, "Step 7: \nRemove the tire. Place the flat tire under the vehicle so in the event of a jack failure the vehicle will fall on the old wheel, hopefully preventing injury. If the jack is placed on a flat, solid base, you shouldn't have any problems. The tire might be stuck due to rust. You could try hitting the inside half of the tire with a rubber mallet to loosen the tire, or use the spare tire to hit the outside half.");
         tireChange.addPicture(6, R.drawable.changetire7);
-        tireChange.addText(7, "Step 8: Place the spare tire on the hub. Take care to align the rim of the spare tire with the wheel bolts, then pu on the lug nuts");
+        tireChange.addText(7, "Step 8: \nPlace the spare tire on the hub. Take care to align the rim of the spare tire with the wheel bolts, then pu on the lug nuts");
         tireChange.addPicture(7, R.drawable.changetire8);
-        tireChange.addText(8, "Step 9: Tighten the nuts by hand until they are all snug. They should turn easily at first. Avoid using so much force that you risk upsetting the jack. You will tighten the lug nuts again once the car is down and there is no risk of it falling.");
+        tireChange.addText(8, "Step 9: \nTighten the nuts by hand until they are all snug. They should turn easily at first. Avoid using so much force that you risk upsetting the jack. You will tighten the lug nuts again once the car is down and there is no risk of it falling.");
         tireChange.addPicture(8, R.drawable.changetire9);
-        tireChange.addText(9, "Step 10: Lower the car without applying full weight on the tire. Tighten the nuts as much as possible.");
+        tireChange.addText(9, "Step 10: \nLower the car without applying full weight on the tire. Tighten the nuts as much as possible.");
         tireChange.addPicture(9, R.drawable.changetire10);
-        tireChange.addText(10, "Step 11: Lower the car to the ground fully and remove the jack. Finish tightening the nuts and replace the hubcap.");
+        tireChange.addText(10, "Step 11: \nLower the car to the ground fully and remove the jack. Finish tightening the nuts and replace the hubcap.");
         tireChange.addPicture(10, R.drawable.changetire11);
-        tireChange.addText(11, "Step 12: Put the old tire in your trunk and take it to a mechanic. Get an estimate for the cost of repair. Small punctures can usually be repaired for less than $15. If the tire is not repairable, then can dispose of it properly and sell you a replacement.");
+        tireChange.addText(11, "Step 12: \nPut the old tire in your trunk and take it to a mechanic. Get an estimate for the cost of repair. Small punctures can usually be repaired for less than $15. If the tire is not repairable, then can dispose of it properly and sell you a replacement.");
         tireChange.addPicture(11, R.drawable.changetire12);
         tireChange.setVideo("https://www.youtube.com/watch?v=joBmbh0AGSQ");
         tire.addItem(tirePressure);
@@ -92,28 +92,27 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         oilChange.setIcon(R.drawable.button_oil);
 
         oilChange.addPicture(0,R.drawable.oil1);
-        oilChange.addText(0,"Step 1: Drive your 8th generation Civic onto ramps, or use a car-jack to lift your vehicle a few feet off of the ground.");
+        oilChange.addText(0,"Step 1: \nDrive your 8th generation Civic onto ramps, or use a car-jack to lift your vehicle a few feet off of the ground.");
 
         oilChange.addPicture(1,R.drawable.oil2);
-        oilChange.addText(1,"Step 2: Open your hood and remove the engine cap.");
+        oilChange.addText(1,"Step 2: \nOpen your hood and remove the engine cap.");
 
         oilChange.addPicture(2,R.drawable.oil3);
-        oilChange.addText(2,"Step 3: Locate the drain plug underneath your vehicle. It looks like a bolt and should be labeled.");
+        oilChange.addText(2,"Step 3: \nLocate the drain plug underneath your vehicle. It looks like a bolt and should be labeled.");
 
         oilChange.addPicture(3,R.drawable.oil4);
-        oilChange.addText(3,"Step 4: Place a drain-pan underneath the plug, and remove the bolt with a 17mm wrench.");
+        oilChange.addText(3,"Step 4: \nPlace a drain-pan underneath the plug, and remove the bolt with a 17mm wrench.");
 
         oilChange.addPicture(4,R.drawable.oil5);
-        oilChange.addText(4,"Step 5: Wait for the engine to finish draining into the pan.");
+        oilChange.addText(4,"Step 5: \nWait for the engine to finish draining into the pan.");
 
         oilChange.addPicture(5,R.drawable.oil6);
-        oilChange.addText(5,"Using the 17mm wrench, tighten the drain-bolt back on.");
+        oilChange.addText(5,"Step 6: \nUsing the 17mm wrench, tighten the drain-bolt back on.");
 
         oilChange.addPicture(6,R.drawable.oil6);
-        oilChange.addText(6,"Step 6: With 4 quarts of 5W-20 synthetic engine, pour the engine into the hole where you first removed the engine cap\n");
+        oilChange.addText(6,"Step 7: \nWith 4 quarts of 5W-20 synthetic engine, pour the engine into the hole where you first removed the engine cap.");
 
-
-        oilChange.addText(7,"Step 7: Screw the engine cap back on. Your car now has new engine!\n");
+        oilChange.addText(7,"Step 8: \nScrew the engine cap back on. Your car now has new engine!");
         oilChange.setVideo("https://www.youtube.com/watch?v=7xzQ-RIr0Cw");
         engine.addItem(oilChange);
         categoryList.add(engine);
@@ -135,9 +134,9 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         jumpStart.addPicture(4, R.drawable.jump5);
         jumpStart.addText(5, "Step 6: \nStart up the live car and let it run for a few minutes then start up the dead car.");
         jumpStart.addPicture(5, R.drawable.jump6);
-        jumpStart.addText(6, "Step 7: \nDisconnect the cables in reverse order: dead car negative, live car negative, live car positive, dead car positive.\n");
+        jumpStart.addText(6, "Step 7: \nDisconnect the cables in reverse order: dead car negative, live car negative, live car positive, dead car positive.");
         jumpStart.addPicture(6, 0);
-        jumpStart.addText(7, "Step 8: \nDrive the dead car around for about half an hour to allow the battery to recharge.");
+        jumpStart.addText(7, "\nStep 8: \nDrive the dead car around for about half an hour to allow the battery to recharge.");
         jumpStart.addPicture(7, 0);
         jumpStart.setVideo("https://www.youtube.com/watch?v=MEtJnwnjcU4");
         emergency.addItem(jumpStart);
@@ -210,10 +209,6 @@ public class SelectCategory extends ActionBarActivity implements View.OnClickLis
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.about) {
             startActivity(new Intent("biippo.about"));
             return true;
