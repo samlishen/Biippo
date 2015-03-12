@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
 
-import Source.Category;
-import Source.SubCategory;
-
 
 public class WelcomeScreen extends ActionBarActivity {
     private static final int TIME_OUT=5;

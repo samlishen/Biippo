@@ -2,13 +2,10 @@ package biippo.css360.uwb.biippobeta;
 
 import android.app.ActionBar;
 import android.content.Intent;
-import android.media.Image;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
